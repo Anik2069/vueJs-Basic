@@ -4,11 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-9">
-        <inventory :items="items"></inventory>
+        <inventory @newitem="addcartitem" :items="items"></inventory>
 
         </div>
         <div class="col-sm-3">
-          <cart_team></cart_team>
+          <cart_team @remove="removeitem" :items="carts"></cart_team>
         </div>
 
       </div>
@@ -30,12 +30,20 @@
         data(){
           return{
               items:[],
+              carts:[]
           }
         }
         ,
         mounted() {
             console.log(data)
             this.items =  data
+        },methods:{
+            addcartitem(item){
+              this.carts.push(item)
+            },
+            removeitem(index){
+                this.carts.splice(index,1)
+            }
         }
     }
 </script>
