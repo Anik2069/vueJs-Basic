@@ -7,7 +7,7 @@ export const routes =[ {
 },
 
   {
-    path:"/test",
+    path:"/test/:id",
     component:test
   }
 ]

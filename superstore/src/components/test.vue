@@ -1,5 +1,5 @@
 <template>
-    <h3>Testing</h3>
+    <h3>Testing {{$route.params.id}}</h3>
 </template>
 
 <script>

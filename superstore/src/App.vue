@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <router-link :to="{path:'/'}">Home </router-link>
-    <router-link :to="{path:'/test'}">Test </router-link>
-
+    <router-link :to="{path:'/test/1'}">Test </router-link>
+    <router-link :to="{path:'/test/2'}">Test </router-link>
+    <router-link :to="{path:'/test/3'}">Test </router-link>
     <router-view></router-view>
     <!--
     <navbar @search="search2"></navbar>
