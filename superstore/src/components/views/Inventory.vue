@@ -15,12 +15,17 @@
 </template>
 <script>
     export default {
-        props:['items'],
-        methods: {
-            addtocart(item){
-                this.$emit('newitem',item)
+        data() {
+            return {
+                items: []
             }
-    }
+        }
+        ,
+        methods: {
+            addtocart(item) {
+                this.$emit('newitem', item)
+            }
+        }
     }
 
 </script>

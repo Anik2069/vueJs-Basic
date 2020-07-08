@@ -1,13 +1,14 @@
-import hello from "../components/hello";
-import test from "../components/test";
-
+import hello from "../components/views/hello";
+import test from "../components/views/test";
+import Inventory from "../components/views/Inventory";
+import itemsdetails from "../components/views/itemsdetails";
 export const routes =[ {
    path:"",
-  component:hello
+  component:Inventory
 },
 
   {
-    path:"/test/:id",
-    component:test
+    path:"/itemsdetails/:id",
+    component:itemsdetails
   }
 ]

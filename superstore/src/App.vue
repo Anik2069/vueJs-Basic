@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <router-link :to="{path:'/'}">Home </router-link>
+   <!-- <router-link :to="{path:'/'}">Home </router-link>
     <router-link :to="{path:'/test/1'}">Test </router-link>
     <router-link :to="{path:'/test/2'}">Test </router-link>
-    <router-link :to="{path:'/test/3'}">Test </router-link>
-    <router-view></router-view>
-    <!--
+    <router-link :to="{path:'/test/3'}">Test </router-link>-->
+
+
     <navbar @search="search2"></navbar>
     <div class="container">
       <div class="row">
         <div class="col-sm-9">
-          <inventory @newitem="addcartitem" :items="items"></inventory>
+          <router-view></router-view>
+         <!-- <inventory @newitem="addcartitem" :items="items"></inventory>-->
 
         </div>
         <div class="col-sm-3">
@@ -18,7 +19,7 @@
         </div>
 
       </div>
-    </div>-->
+    </div>
   </div>
 </template>
 
@@ -26,13 +27,14 @@
 
     import Navbar from './components/Nav'
     import Cart_team from './components/cart'
-    import Inventory from './components/Inventory'
+   // import Inventory from './components/views/Inventory'
     import data from './data.js'
 
     export default {
         components: {
             Navbar,
-            Cart_team, Inventory
+            Cart_team,
+            //Inventory
         },
         data() {
             return {
