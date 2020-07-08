@@ -4,9 +4,7 @@
     <list default="true" id="72fd4af9-9f5d-4bf0-bdb2-a7c4c8c7d3f9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/superstore/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/superstore/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore/src/components/Inventory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/superstore/src/components/Inventory.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore/src/components/cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/superstore/src/components/cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/superstore/src/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore/src/components/Nav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/superstore/src/components/Nav.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,8 @@
       <option name="presentableId" value="Default" />
       <updated>1592721229121</updated>
       <workItem from="1592721248639" duration="4365000" />
-      <workItem from="1593669628762" duration="3332000" />
+      <workItem from="1593669628762" duration="3969000" />
+      <workItem from="1593680289365" duration="2889000" />
     </task>
     <servers />
   </component>
