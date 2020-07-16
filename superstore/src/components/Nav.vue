@@ -16,7 +16,7 @@
   </nav>
 </template>
 <script>
-
+import axios from 'axios'
     export default {
         data() {
             return {
@@ -25,7 +25,9 @@
         },
         methods:{
             search1(){
-
+                axios.get('http://localhost:3000/search/'+ this.keyword).then(response => {
+console.log(response)
+                })
             }
         }
     }
