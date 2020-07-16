@@ -16,6 +16,7 @@
   </nav>
 </template>
 <script>
+
     export default {
         data() {
             return {
@@ -24,7 +25,7 @@
         },
         methods:{
             search1(){
-              this.$emit("search",this.keyword)
+
             }
         }
     }
