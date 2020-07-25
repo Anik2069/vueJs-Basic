@@ -12,10 +12,17 @@ Vue.config.productionTip = false
 
 import VueRouter from 'vue-router'
 
+
+
 Vue.use(VueRouter)
-
-
+Vue.use(Vuex)
+import Vuex from 'vuex'
 import { routes } from "./router/index";
+
+import {storage} from "./store/index";
+
+const  store = new Vuex.Store (storage)
+
 const router = new VueRouter({
   mode: "history",
   routes
@@ -25,6 +32,7 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
