@@ -32,7 +32,7 @@
         },
         methods: {
             addtocart(item) {
-                this.$emit('newitem', item)
+                this.$store.commit('addtocart', item)
             },
             fetchdata() {
                 var self = this;
