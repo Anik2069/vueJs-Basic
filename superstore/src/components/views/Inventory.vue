@@ -23,10 +23,15 @@
     export default {
         data() {
             return {
-                items: []
+
             }
         }
         ,
+        computed:{
+          items(){
+              return this.$store.getters.getInventory
+          }
+        },
         mounted() {
             this.fetchdata();
         },
@@ -37,7 +42,8 @@
             fetchdata() {
                 var self = this;
                 axios.get('http://localhost:3000/items').then(response => {
-                    self.items = response.data;
+
+                    self.$store.commit('setInventorty',response.data)
                 })
             }
         }

@@ -25,8 +25,10 @@ import axios from 'axios'
         },
         methods:{
             search1(){
+                var self= this;
                 axios.get('http://localhost:3000/search/'+ this.keyword).then(response => {
-console.log(response)
+                  //console.log(response)
+                self.$store.commit('setInventorty',response.data)
                 })
             }
         }

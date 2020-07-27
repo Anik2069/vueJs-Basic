@@ -7,6 +7,7 @@
       <h1>{{item.title}}</h1>
       <p>{{item.description}}</p>
       <p>{{item.price}}</p>
+      <button @click="addtocart(item)" class="btn btn-primary">Add to Cart</button>
     </div>
 
   </div>
@@ -31,8 +32,12 @@
                 axios.get('http://localhost:3000/item/'+ this.$route.params.id).then(response => {
                     self.item = response.data;
                 })
-            }
+            },
+            addtocart(item) {
+                this.$store.commit('addtocart', item)
+            },
         }
+
     }
 </script>
 

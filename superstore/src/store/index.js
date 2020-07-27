@@ -17,6 +17,13 @@ export const storage = {
     },
     removeitem(state,payload){
       state.cart.splice(payload,1)
+    },
+    setInventorty(state,payload){
+      state.inventory=payload
+    },
+    clearcart(state){
+      state.cart = []
+
     }
   }
 
