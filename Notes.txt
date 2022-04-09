@@ -1,0 +1,28 @@
+HTML vue js run korar jnno first vue js import kora lgbe
+
+aghe project gula vue 2 ta kora to website theke vue 2 documentation follow korte hbe
+vue function 
+
+<script>
+    new Vue({
+        el: "#app", == element id
+        data: {
+            ei data function moddhe amar proyo jnio data compact moto pass korbo
+            show korar jnno {{ }} use kora hoi
+        },
+    })
+</script>
+
+v-model - Data Reactivity kora
+
+@submit == vue js function
+
+data pore method add hoi
+
+computer depend on other property
+
+Slice has two perameter one is index another is koto gula element delete hbe seita
+==================================================
+vue 2 e jnno cli command 
+
+vue init webpack projectName
