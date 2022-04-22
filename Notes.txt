@@ -26,3 +26,7 @@ Slice has two perameter one is index another is koto gula element delete hbe sei
 vue 2 e jnno cli command 
 
 vue init webpack projectName
+
+==============
+props use to data pass from one component to another component
+emit use to close an evnets
