@@ -30,3 +30,9 @@ vue init webpack projectName
 ==============
 props use to data pass from one component to another component
 emit use to close an evnets
+
+Event Modifiy event name por dot dite hebe
+
+slot passing template
+
+Teleport
