@@ -27,6 +27,9 @@ vue 2 e jnno cli command
 
 vue init webpack projectName
 
+mount hoilo onchange event moto jokon vue component call hoi e moddhe kono funcationality call kroaite hole eita use kora hoi
+
+
 ==============
 props use to data pass from one component to another component
 emit use to close an evnets
