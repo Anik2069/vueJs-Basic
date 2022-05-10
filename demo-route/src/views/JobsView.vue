@@ -13,6 +13,7 @@ export default {
             [
                 {id:1,title:'Software Enginer',vacancy:50},
                 {id:2,title:'Software QA',vacancy:50}
+                {id:3,title:'Software UI/UX',vacancy:50}
             ],
         }
     }
@@ -21,5 +22,5 @@ export default {
 
 <style lang="">
     
-    
+
 </style>
