@@ -4,8 +4,27 @@
     <router-link to="/about">About</router-link>
     <router-link :to="{ name: 'jobs' }">Jobs</router-link>
   </nav>
-  <router-view/>
+  <button @click="back">GO Back</button>
+  <button @click="forward">Forward</button>
+  <button @click="redirect">Redirect</button>
+  <router-view />
 </template>
+
+<script>
+export default {
+  methods: {
+    back() {
+      this.$router.go(-1)
+    },
+    forward() {
+      this.$router.go(1)
+    },
+    redirect() {
+      this.$router.push({name:'home'})
+    },
+  },
+};
+</script>
 
 <style>
 #app {

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import JobsView from '../views/JobsView.vue'
 import JobDetailsView from '../views/JobDetailsView.vue'
+import SignUpFormView from '../views/SignUpFormView.vue'
 import NotFound from '../views/NotFound.vue'
 
 const routes = [{
@@ -14,6 +15,11 @@ const routes = [{
         path: '/jobs',
         name: 'jobs',
         component: JobsView
+    },
+    {
+        path: '/signup',
+        name: 'signup',
+        component: SignUpFormView
     },
     {
         path: '/about',
