@@ -1,17 +1,13 @@
 <template>
 <h1>Jobs Details</h1>
-    <p>Paramter Check {{ $route.params.id }}</p>
+    <p>Paramter Check {{ $route.params.id }} -- Way Two {{ id }}</p>
 </template>
 
 <script>
 export default {
     data(){
         return{
-            jobs : 
-            [
-                {id:1,title:'Software Enginer',vacancy:50},
-                {id:2,title:'Software QA',vacancy:50}
-            ],
+            id : this.$route.params.id
         }
     }
 }
