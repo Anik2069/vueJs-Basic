@@ -4,71 +4,71 @@
   <div>
     <form action="/action_page.php">
       <label for="fname">Email</label>
-      <input
-        type="text"
-        v-model="email"
-        placeholder="Your Email.."
-      />
+      <input type="text" v-model="email" placeholder="Your Email.." />
 
       <label for="lname">Password</label>
-      <input
-        type="password"
-        v-model="password"
-        placeholder="Your Password"
-      />
-
+      <input type="password" v-model="password" placeholder="Your Password" />
 
       <label for="lname">Skills</label>
       <input
         type="text"
-        v-model="skill" @keyup="addSkill"
+        v-model="skill"
+        @keyup.alt="addSkill"
         placeholder="Your skill"
       />
 
-    
-    <label for="country">Country</label>
-    <select id="country" v-model="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
+      <label for="country">Country</label>
+      <select id="country" v-model="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
       <input type="submit" value="Submit" />
     </form>
   </div>
   <div>
-    <p>EMail: {{ email}}</p>
-    <p>Password: {{ password}}</p>
-    <p>Country: {{ country}}</p>
+    <p>EMail: {{ email }}</p>
+    <p>Password: {{ password }}</p>
+    <p>Country: {{ country }}</p>
   </div>
   <div v-for="d in skills" :key="d">
-      {{ d }}
-
+    <span @click="deleteSkill(d)"> {{ d }} </span>
   </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            email:'',
-            password:'',
-            country:'',
-            skill:'',
-            skills:[],
+  data() {
+    return {
+      email: "",
+      password: "",
+      country: "",
+      skill: "",
+      skills: [],
+    };
+  },
+  methods: {
+    addSkill(e) {
+      if (e.key === "," && this.skill) {
+        if (!this.skills.includes(this.skill)) {
+          this.skills.push(this.skill);
         }
-    },methods:{
-        addSkill(e){
-            if(e.key===',' && this.skill){
-                this.skills.push(this.skill)
-                this.skill=''
-            }
-        }
-    }
+
+        this.skill = "";
+      }
+    },
+    deleteSkill(d) {
+      this.skills = this.skills.filter((item) => {
+        return d !== item;
+      });
+    },
+  },
 };
 </script>
 
 <style>
-input[type="text"],input[type="password"],
+input[type="text"],
+input[type="password"],
 select {
   width: 100%;
   padding: 12px 20px;
