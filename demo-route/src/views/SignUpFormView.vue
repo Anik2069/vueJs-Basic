@@ -2,13 +2,15 @@
   <h3>Using CSS to style an HTML Form</h3>
 
   <div>
-    <form action="/action_page.php">
+    <form @submit.prevent="handleSubmit">
       <label for="fname">Email</label>
       <input type="text" v-model="email" placeholder="Your Email.." />
 
       <label for="lname">Password</label>
       <input type="password" v-model="password" placeholder="Your Password" />
-
+      <div v-if="passError">
+        {{ passError }}
+      </div>
       <label for="lname">Skills</label>
       <input
         type="text"
@@ -45,6 +47,7 @@ export default {
       country: "",
       skill: "",
       skills: [],
+      passError: "",
     };
   },
   methods: {
@@ -61,6 +64,9 @@ export default {
       this.skills = this.skills.filter((item) => {
         return d !== item;
       });
+    },
+    handleSubmit() {
+      this.passError = this.password.length < 3 ? "Password two weak" : "";
     },
   },
 };
