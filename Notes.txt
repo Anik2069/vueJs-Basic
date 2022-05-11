@@ -39,3 +39,8 @@ Event Modifiy event name por dot dite hebe
 slot passing template
 
 Teleport
+
+=JSON Server====
+npm install json-server
+
+npx json-server --watch db.json
