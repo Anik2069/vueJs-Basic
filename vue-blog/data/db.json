@@ -1,0 +1,7 @@
+{
+    "posts": [
+        { "id": 1, "title": "1st Blog", "desc": "Blog comes first now", "tags": ["php", "vue", "laravel"] },
+        { "id": 2, "title": "2nd Blog", "desc": "Blog comes Second now", "tags": ["php", "vue", "laravel"] }
+    ]
+
+}
