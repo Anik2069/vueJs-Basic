@@ -1,12 +1,20 @@
 <template>
     <div>
        <h3>{{ post.title }}</h3> 
-       <p>{{ post.desc }}</p>
+       <p>{{ sinppet }}</p>
     </div>
 </template>
 
 <script>
+import { computed } from '@vue/runtime-core'
 export default {
-    props:['post']
+    props:['post'],
+    setup(props){
+        const sinppet = computed(()=>{
+            return props.post.desc.substring(0,2)+'.....'
+        })
+
+        return {  sinppet }
+    }
 }
 </script>
